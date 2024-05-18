@@ -4,28 +4,32 @@ using TaskManagement.UserService.GraphQL.Mutation;
 using TaskManagement.UserService.GraphQL.Query;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddScoped<UserDbContext>();
+
+
 builder.Services
     .AddGraphQLServer()
     .AddQueryType<Query>()
-    .AddMutationType<Mutation>()
-    ;
+    .AddMutationType<Mutation>();
 
+builder.Services.AddSingleton<UserDbContext>();
 var app = builder.Build();
 
-var logger = app.Services.GetService<ILogger<UserDbContext>>();
-
-try
-{
-    var dbContext = app.Services.CreateScope().ServiceProvider.GetRequiredService<UserDbContext>();
-    await dbContext.Database.MigrateAsync();
-    logger.LogInformation("Миграции успешно применены");
-}
-catch (Exception ex)
-{
-    logger.LogError("Ошибка применения миграций: " + ex.Message);
-    return;
-}
+// using (var scope = app.Services.CreateScope())
+// {
+//     var services = scope.ServiceProvider;
+//     var logger = services.GetRequiredService<ILogger<Program>>();
+//
+//     try
+//     {
+//         var dbContext = services.GetRequiredService<UserDbContext>();
+//         dbContext.Database.Migrate();
+//         logger.LogInformation("Миграции успешно применены");
+//     }
+//     catch (Exception ex)
+//     {
+//         logger.LogError(ex, "Ошибка применения миграций: {Message}", ex.Message);
+//     }
+// }
 
 app.MapGraphQL();
 
