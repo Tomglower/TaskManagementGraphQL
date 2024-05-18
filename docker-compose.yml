@@ -1,0 +1,16 @@
+﻿version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15  # Используем официальный образ PostgreSQL
+    environment:
+      POSTGRES_USER: myuser  # Пользователь базы данных
+      POSTGRES_PASSWORD: mypassword  # Пароль
+      POSTGRES_DB: TaskManagement  # Имя базы данных
+    ports:
+      - "25432:5432"  # Экспонируем порт PostgreSQL
+    volumes:
+      - pgdata:/var/lib/postgresql/data  # Том для хранения данных
+    restart: unless-stopped  # Перезапускать при сбое или перезагрузке
+volumes:
+  pgdata:
