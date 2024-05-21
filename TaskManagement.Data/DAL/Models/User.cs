@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace TaskManagement.UserService.DAL.Models;
+namespace TaskManagement.Data.DAL.Models;
 
 public class User
 {
@@ -10,4 +10,8 @@ public class User
     public string Email { get; set; }
     public string PasswordHash { get; set; }
     public DateTime CreatedAt { get; set; }
+
+    // Navigation properties
+    public ICollection<Project> OwnedProjects { get; set; }
+    public ICollection<Task> AssignedTasks { get; set; }
 }

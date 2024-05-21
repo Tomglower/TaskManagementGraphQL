@@ -1,4 +1,4 @@
-using TaskManagement.UserService.DAL.Models;
+using TaskManagement.Data.DAL.Models;
 
 namespace TaskManagement.UserService.GraphQL.Mutation;
 

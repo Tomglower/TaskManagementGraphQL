@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using TaskManagement.UserService.DAL;
-using TaskManagement.UserService.DAL.Models;
+using TaskManagement.Data.DAL.Models;
 
 namespace TaskManagement.UserService.GraphQL.Query;
 

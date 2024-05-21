@@ -15,6 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="FluentValidation" Version="11.9.1" />
       <PackageReference Include="HotChocolate" Version="14.0.0-p.100" />
       <PackageReference Include="HotChocolate.AspNetCore" Version="14.0.0-p.100" />
       <PackageReference Include="HotChocolate.Data.EntityFramework" Version="14.0.0-p.100" />
@@ -29,7 +30,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Migrations\" />
+      <ProjectReference Include="..\TaskManagement.Data\TaskManagement.Data.csproj" />
     </ItemGroup>
+ 
 
 </Project>

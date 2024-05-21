@@ -1,12 +1,12 @@
-using TaskManagement.UserService.DAL;
+using TaskManagement.Data;
 
 namespace TaskManagement.UserService.GraphQL.Mutation;
 
 public sealed partial class Mutation
 {
-    private readonly UserDbContext _dbContext;
+    private readonly MasterDbContext _dbContext;
 
-    public Mutation(UserDbContext dbContext)
+    public Mutation(MasterDbContext dbContext)
     {
         _dbContext = dbContext;
     }

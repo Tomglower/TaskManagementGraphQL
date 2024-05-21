@@ -5,6 +5,7 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+        <UserSecretsId>4539877c-b314-480b-a21b-f9b2eb7faea5</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
@@ -17,11 +18,19 @@
       <PackageReference Include="HotChocolate.AspNetCore" Version="14.0.0-p.100" />
       <PackageReference Include="HotChocolate.AspNetCore.Playground" Version="10.5.5" />
       <PackageReference Include="HotChocolate.Data" Version="14.0.0-p.100" />
-      <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.19">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.0-preview.3.24172.9" />
       <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="7.0.0" />
       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
       <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
       <PackageReference Include="Ocelot" Version="23.2.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\TaskManagement.Data\TaskManagement.Data.csproj" />
     </ItemGroup>
 
 </Project>
