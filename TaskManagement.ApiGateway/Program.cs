@@ -1,14 +1,17 @@
 using Microsoft.EntityFrameworkCore;
+using Ocelot.DependencyInjection;
+using Ocelot.Middleware;
 using TaskManagement.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSingleton<MasterDbContext>();
-
+builder.Services.AddOcelot();
 var app = builder.Build();
 
-
+app.UseOcelot();
 app.MapGet("/", () => "Hello World!");
+
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;

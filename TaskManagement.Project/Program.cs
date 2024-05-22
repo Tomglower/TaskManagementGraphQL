@@ -6,8 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services
     .AddGraphQLServer()
     .AddMutationType<Mutation>()
-    .AddQueryType<Query>();
-
+    .AddQueryType<Query>()
+    .AddTypeExtensionsFromFile("./scheme.graphql");
+    
 builder.Services.AddSingleton<MasterDbContext>();
 
 var app = builder.Build();

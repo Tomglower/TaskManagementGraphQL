@@ -6,7 +6,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5001
+          "Port": 5109
         }
       ],
       "UpstreamPathTemplate": "/users/graphql",
@@ -18,7 +18,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5002
+          "Port": 5094
         }
       ],
       "UpstreamPathTemplate": "/projects/graphql",
