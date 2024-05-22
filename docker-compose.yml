@@ -12,5 +12,17 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data  # Том для хранения данных
     restart: unless-stopped  # Перезапускать при сбое или перезагрузке
+    
+#  keycloak:
+#    image: quay.io/keycloak/keycloak:20.0.2
+#    container_name: keycloak
+#    command:
+#      - start --auto-build --db dev-file --hostname-strict-https false --hostname-strict false --proxy edge --http-enabled true
+#    environment:
+#      KEYCLOAK_ADMIN: admin
+#      KEYCLOAK_ADMIN_PASSWORD: admin
+#    ports:
+#      - 8282:8080
+    
 volumes:
   pgdata:
