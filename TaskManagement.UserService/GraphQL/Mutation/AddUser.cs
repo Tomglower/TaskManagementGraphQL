@@ -1,4 +1,5 @@
 using TaskManagement.Data.DAL.Models;
+using BCrypt.Net;
 
 namespace TaskManagement.UserService.GraphQL.Mutation;
 
@@ -11,7 +12,7 @@ public sealed partial class Mutation
         {
             Id = Guid.NewGuid(),
             Username = input.Username,
-            PasswordHash = input.PasswordHash,
+            PasswordHash = BCrypt.Net.BCrypt.HashPassword(input.PasswordHash),
             Email = input.Email,
             CreatedAt = DateTime.UtcNow
         };
