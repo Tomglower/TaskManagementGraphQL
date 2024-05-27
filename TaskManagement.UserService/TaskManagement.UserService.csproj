@@ -21,6 +21,7 @@
       <PackageReference Include="HotChocolate" Version="14.0.0-p.100" />
       <PackageReference Include="HotChocolate.AspNetCore" Version="14.0.0-p.100" />
       <PackageReference Include="HotChocolate.Data.EntityFramework" Version="14.0.0-p.100" />
+      <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.19" />
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.19" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.19">
         <PrivateAssets>all</PrivateAssets>
@@ -29,6 +30,7 @@
       <PackageReference Include="Npgsql" Version="7.0.7" />
       <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.18" />
       <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.1" />
+      <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.5.2" />
     </ItemGroup>
 
     <ItemGroup>

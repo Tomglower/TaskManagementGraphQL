@@ -20,9 +20,7 @@ public sealed partial class Mutation
          await _dbContext.SaveChangesAsync();
          return new UserPayload(user);
     }
-
-
-
+    
     public record UserInput(string Username, string Email, string PasswordHash);
     public record UserPayload(User record);
 }
