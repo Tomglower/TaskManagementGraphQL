@@ -10,6 +10,5 @@ public sealed partial class Query
     {
         return await _dbcontext.Projects.ToListAsync();
         
-
     }
 }
