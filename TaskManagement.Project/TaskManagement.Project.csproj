@@ -5,6 +5,7 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+        <UserSecretsId>00a2191f-cc36-4a0b-9ef7-608904259810</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
@@ -19,6 +20,7 @@
         <PackageReference Include="HotChocolate.AspNetCore" Version="14.0.0-p.100" />
         <PackageReference Include="HotChocolate.Data.EntityFramework" Version="14.0.0-p.100" />
         <PackageReference Include="HotChocolate.Stitching" Version="13.9.4" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.19" />
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.19" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.19">
             <PrivateAssets>all</PrivateAssets>

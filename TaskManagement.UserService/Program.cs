@@ -35,8 +35,8 @@ builder.Services.AddAuthentication(options =>
         };
     });
 
-builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
 builder.Services.AddAuthorization();
+builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
 
 // Регистрация контекста базы данных
 builder.Services.AddSingleton<MasterDbContext>();
